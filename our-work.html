@@ -1,1 +1,495 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <meta
+    name="description"
+    content="See the work of Asaph Generation through music, service, outreach, and community."
+  />
+
+  <title>Our Work | Asaph Generation</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* =========================================
+       OUR WORK PAGE
+       ========================================= */
+
+    .work-hero {
+      padding: 120px 20px 90px;
+      text-align: center;
+    }
+
+    .work-hero .container {
+      max-width: 850px;
+    }
+
+    .work-hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(48px, 8vw, 76px);
+      line-height: 1.05;
+      margin: 15px 0 25px;
+      letter-spacing: -2px;
+    }
+
+    .work-hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 18px;
+      line-height: 1.8;
+      opacity: 0.75;
+    }
+
+    .work-hero .ko {
+      margin-top: 14px;
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 15px;
+    }
+
+    .work-section {
+      padding: 80px 20px;
+    }
+
+    .work-section.alt {
+      background: rgba(0, 0, 0, 0.025);
+    }
+
+    .work-heading {
+      max-width: 750px;
+      margin-bottom: 45px;
+    }
+
+    .work-heading h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(32px, 5vw, 48px);
+      margin: 10px 0 15px;
+    }
+
+    .work-heading p {
+      font-size: 16px;
+      line-height: 1.7;
+      opacity: 0.75;
+    }
+
+    /* Photo grid */
+
+    .work-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .work-photo {
+      position: relative;
+      overflow: hidden;
+      border-radius: 18px;
+      min-height: 300px;
+      background: #eeeeee;
+    }
+
+    .work-photo.large {
+      grid-column: span 2;
+      min-height: 420px;
+    }
+
+    .work-photo img {
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.45s ease;
+    }
+
+    .work-photo.large img {
+      min-height: 420px;
+    }
+
+    .work-photo:hover img {
+      transform: scale(1.04);
+    }
+
+    .photo-caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 45px 25px 22px;
+      color: white;
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.72),
+        transparent
+      );
+    }
+
+    .photo-caption strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .photo-caption span {
+      font-size: 13px;
+      opacity: 0.85;
+    }
+
+    /* Empty photo placeholders */
+
+    .work-placeholder {
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+      border: 1px dashed rgba(0, 0, 0, 0.2);
+      border-radius: 18px;
+      background: rgba(0, 0, 0, 0.025);
+    }
+
+    .work-placeholder strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 17px;
+    }
+
+    .work-placeholder p {
+      margin: 0;
+      font-size: 13px;
+      opacity: 0.65;
+    }
+
+    /* Bottom CTA */
+
+    .work-cta {
+      padding: 90px 20px;
+      text-align: center;
+    }
+
+    .work-cta h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(34px, 5vw, 50px);
+      margin-bottom: 15px;
+    }
+
+    .work-cta p {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      line-height: 1.7;
+      opacity: 0.75;
+    }
+
+    /* Mobile */
+
+    @media (max-width: 800px) {
+      .work-hero {
+        padding: 90px 20px 65px;
+      }
+
+      .work-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .work-photo.large {
+        grid-column: span 1;
+        min-height: 350px;
+      }
+
+      .work-photo.large img {
+        min-height: 350px;
+      }
+
+      .work-photo {
+        min-height: 280px;
+      }
+
+      .work-photo img {
+        min-height: 280px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+
+      <a class="brand" href="index.html" aria-label="Asaph Generation home">
+        <span class="brand-mark">AG</span>
+
+        <span>
+          <strong>ASAPH GENERATION</strong>
+          <small>Worship. Lead. Serve.</small>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html#about">About</a>
+        <a href="index.html#mission">Mission</a>
+        <a href="index.html#outreach">Outreach</a>
+        <a href="index.html#events">Events</a>
+        <a href="index.html#leadership">Leadership</a>
+        <a href="our-work.html" class="nav-cta">Our Work</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="work-hero">
+      <div class="container">
+
+        <span class="section-kicker">OUR WORK</span>
+
+        <h1>Worship. Lead. Serve.</h1>
+
+        <p>
+          See Asaph Generation in action as we use music, faith, and
+          compassion to serve senior communities and bring people together.
+        </p>
+
+        <p class="ko">
+          음악과 믿음, 사랑으로 어르신들을 섬기며 함께하는
+          아삽 제너레이션의 활동을 만나보세요.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- SENIOR OUTREACH -->
+
+    <section class="work-section">
+
+      <div class="container">
+
+        <div class="work-heading">
+          <span class="section-kicker">SENIOR OUTREACH</span>
+
+          <h2>Music That Connects Hearts.</h2>
+
+          <p>
+            Our student musicians bring live music, encouragement, and
+            fellowship to senior communities.
+          </p>
+        </div>
+
+
+        <div class="work-gallery">
+
+          <!-- Replace these placeholder paths with your real photos -->
+
+          <div class="work-placeholder">
+            <div>
+              <strong>Your Outreach Photo</strong>
+              <p>Add your first senior outreach photo here.</p>
+            </div>
+          </div>
+
+          <div class="work-placeholder">
+            <div>
+              <strong>Your Outreach Photo</strong>
+              <p>Add another photo from your outreach.</p>
+            </div>
+          </div>
+
+          <div class="work-placeholder">
+            <div>
+              <strong>Your Outreach Photo</strong>
+              <p>Add another photo from your outreach.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONCERTS -->
+
+    <section class="work-section alt">
+
+      <div class="container">
+
+        <div class="work-heading">
+          <span class="section-kicker">CONCERTS & EVENTS</span>
+
+          <h2>Sharing Our Gifts Through Music.</h2>
+
+          <p>
+            From our founding concert to future performances, every event
+            gives our students an opportunity to serve through music.
+          </p>
+        </div>
+
+
+        <div class="work-gallery">
+
+          <div class="work-placeholder">
+            <div>
+              <strong>Concert Photo</strong>
+              <p>Add a photo from your concert here.</p>
+            </div>
+          </div>
+
+          <div class="work-placeholder">
+            <div>
+              <strong>Concert Photo</strong>
+              <p>Add another concert photo here.</p>
+            </div>
+          </div>
+
+          <div class="work-placeholder">
+            <div>
+              <strong>Concert Photo</strong>
+              <p>Add another concert photo here.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SERVICE -->
+
+    <section class="work-section">
+
+      <div class="container">
+
+        <div class="work-heading">
+          <span class="section-kicker">SERVICE & FELLOWSHIP</span>
+
+          <h2>Serving Beyond the Music.</h2>
+
+          <p>
+            Our work is about more than performing. We seek to build
+            relationships, encourage others, and serve with humility.
+          </p>
+        </div>
+
+
+        <div class="work-gallery">
+
+          <div class="work-placeholder">
+            <div>
+              <strong>Service Photo</strong>
+              <p>Add a photo of students serving here.</p>
+            </div>
+          </div>
+
+          <div class="work-placeholder">
+            <div>
+              <strong>Fellowship Photo</strong>
+              <p>Add a photo showing fellowship and connection.</p>
+            </div>
+          </div>
+
+          <div class="work-placeholder">
+            <div>
+              <strong>Community Photo</strong>
+              <p>Add another community photo here.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="work-cta">
+
+      <div class="container">
+
+        <span class="section-kicker">BE PART OF THE MISSION</span>
+
+        <h2>There is more work to be done.</h2>
+
+        <p>
+          Whether through music, volunteering, prayer, or partnership,
+          there is a place for everyone to serve.
+        </p>
+
+        <a class="btn primary" href="index.html#volunteer">
+          Join the Mission
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-grid">
+
+      <div>
+        <div class="footer-brand">ASAPH GENERATION</div>
+        <p>Worship. Lead. Serve.</p>
+      </div>
+
+      <div>
+        <strong>Serving Senior Communities</strong>
+        <p>Through music, faith, compassion, and leadership.</p>
+      </div>
+
+      <div>
+        <strong>Contact</strong>
+        <p>
+          <a href="mailto:info@asaphgeneration.org">
+            info@asaphgeneration.org
+          </a>
+        </p>
+        <p>Fairview, New Jersey</p>
+      </div>
+
+    </div>
+
+    <div class="container copyright">
+      © 2026 Asaph Generation. All rights reserved.
+    </div>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
